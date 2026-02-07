@@ -107,3 +107,54 @@ section {
   min-height: 60vh; /* 每個區塊至少佔據螢幕高度的 60% */
   padding-top: 2rem; /* 避免標題頂到最上方太擠 */
 }
+
+/* 價格表的設計 */
+/* 表格容器：確保手機版可以左右滑動 */
+.table-container {
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+
+.price-table {
+  width: 100%;
+  border-collapse: collapse; /* 讓邊框合併成單一線條 */
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden; /* 確保圓角效果 */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.price-table th, 
+.price-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+/* 表頭樣式 */
+.price-table th {
+  background-color: #a67c52; /* 使用我們之前提到的暖皮革色 */
+  color: white;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* 隔行變色：增加閱讀舒適度 */
+.price-table tbody tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+/* 滑鼠懸停效果 */
+.price-table tbody tr:hover {
+  background-color: #f5f0eb;
+  transition: background-color 0.2s ease;
+}
+
+/* 備註文字樣式 */
+.price-note {
+  font-size: 0.85rem;
+  color: #888;
+  font-style: italic;
+}
+
+
