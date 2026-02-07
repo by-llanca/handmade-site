@@ -87,3 +87,15 @@ section h2 {
     flex-wrap: wrap; /* 讓手機版如果太擠會自動掉下來 */
   }
 }
+
+/* 讓捲動變得平滑 */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 讓每個區塊至少有一定高度，確保能捲動 */
+section {
+  margin-bottom: 3rem;
+  min-height: 60vh; /* 每個區塊至少佔據螢幕高度的 60% */
+  padding-top: 2rem; /* 避免標題頂到最上方太擠 */
+}
