@@ -50,3 +50,40 @@ section h2 {
   color: #666;
   font-size: 0.9rem;
 }
+
+/* 導覽列容器 */
+.site-nav {
+  margin-top: 1.5rem;
+}
+
+/* 移除清單樣式並置中 */
+.site-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center; /* 讓選單在電腦端置中 */
+  gap: 2rem; /* 選單選項之間的間距 */
+}
+
+/* 連結樣式 */
+.site-nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease; /* 增加滑鼠移上去的平滑感 */
+}
+
+/* 滑鼠移上去的效果 */
+.site-nav a:hover {
+  color: #a67c52; /* 換成一個溫暖的皮革色或線條色 */
+  border-bottom: 2px solid #a67c52;
+}
+
+/* 手機版適應：當螢幕太窄時自動換行 */
+@media (max-width: 480px) {
+  .site-nav ul {
+    gap: 1rem;
+    flex-wrap: wrap; /* 讓手機版如果太擠會自動掉下來 */
+  }
+}
