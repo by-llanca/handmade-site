@@ -80,6 +80,14 @@ section h2 {
   border-bottom: 2px solid #a67c52;
 }
 
+/* 固定式選單 (Sticky Header) */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* 加點陰影增加層次感 */
+}
+
 /* 手機版適應：當螢幕太窄時自動換行 */
 @media (max-width: 480px) {
   .site-nav ul {
