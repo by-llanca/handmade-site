@@ -9,3 +9,45 @@ body {
                "Segoe UI", sans-serif;
   line-height: 1.6;
 }
+
+/* Header */
+.site-header {
+  padding: 2rem 1rem;
+  text-align: center;
+  background-color: #f5f5f5;
+}
+
+.site-title {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.site-subtitle {
+  margin-top: 0.5rem;
+  color: #555;
+}
+
+/* Main content */
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+section h2 {
+  margin-bottom: 0.5rem;
+}
+
+/* Footer */
+.site-footer {
+  padding: 1.5rem 1rem;
+  text-align: center;
+  background-color: #f0f0f0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
