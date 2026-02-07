@@ -130,7 +130,14 @@ section {
   text-align: left;
   border-bottom: 1px solid #eee;
 }
-
+/* 讓第一欄類別文字置中並加深顏色 */
+.price-table td:first-child {
+  background-color: #fcfaf8;
+  font-weight: bold;
+  color: #a67c52;
+  text-align: center;
+  vertical-align: middle;
+}
 /* 表頭樣式 */
 .price-table th {
   background-color: #a67c52; /* 使用我們之前提到的暖皮革色 */
@@ -157,4 +164,10 @@ section {
   font-style: italic;
 }
 
+/* 強化備註文字的標記 */
+.price-note {
+  margin-top: 0.5rem;
+  padding-left: 1rem;
+  border-left: 3px solid #a67c52;
+}
 
