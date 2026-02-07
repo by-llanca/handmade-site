@@ -8,8 +8,9 @@ body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont,
                "Segoe UI", sans-serif;
   line-height: 1.6;
+}
 
-  /* Header */
+/* Header */
 .site-header {
   padding: 2rem 1rem;
   text-align: center;
@@ -49,8 +50,3 @@ section h2 {
   color: #666;
   font-size: 0.9rem;
 }
-
-
-}
-
-
