@@ -432,3 +432,80 @@ section h2 {
   margin-bottom: 10px;
   letter-spacing: 1px;
 }
+
+
+/* =========================================
+   10. 委託流程時間軸 (Timeline CSS)
+   ========================================= */
+.process-section {
+  padding-bottom: 5rem;
+}
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* 貫穿中間的導引線 */
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 31px; /* 對準圓圈中心 */
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background-color: #D6CCDF; /* 淺紫色導引線 */
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2.5rem;
+  padding-left: 60px;
+}
+
+/* 步驟圓圈 */
+.timeline-dot {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  background-color: #B08426; /* 金棕色標註 */
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  z-index: 2;
+  box-shadow: 0 0 0 8px #ffffff; /* 透過白色外圈隔開導引線 */
+}
+
+/* 內容對話框 */
+.timeline-content {
+  background-color: #fcfaff;
+  padding: 1.5rem;
+  border-radius: 20px;
+  border: 1px solid #D6CCDF;
+  transition: transform 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: translateX(10px); /* 滑過時往右微動，很有互動感 */
+  border-color: #9B8CA7;
+}
+
+.timeline-content h3 {
+  margin: 0 0 0.5rem 0;
+  color: #403C50;
+  font-size: 1.1rem;
+}
+
+.timeline-content p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #626071;
+  line-height: 1.6;
+}
