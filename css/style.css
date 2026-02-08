@@ -255,3 +255,70 @@ section h2 {
   from {transform: scale(0.7); opacity: 0;}
   to {transform: scale(1); opacity: 1;}
 }
+
+/* =========================================
+   8. 注意事項卡片 (Rules Cards)
+   ========================================= */
+
+/* 卡片容器：使用 Flex 讓卡片橫向排列 */
+.rules-container {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap; /* 手機版會自動換行 */
+  margin-top: 2rem;
+}
+
+/* 單張卡片樣式 */
+.rule-card {
+  flex: 1; /* 讓三張卡片平分寬度 */
+  min-width: 250px; /* 手機版最窄寬度 */
+  background-color: #ffffff;
+  padding: 2rem 1.5rem;
+  border-radius: 15px;
+  border: 1px solid #D6CCDF; /* 淺紫邊框 */
+  box-shadow: 0 4px 15px rgba(64, 60, 80, 0.05);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* 滑鼠移上去卡片變深色，文字變淺色 */
+.rule-card:hover {
+  background-color: #403C50; /* 使用色卡的深紫黑 */
+  transform: translateY(-10px);
+}
+
+.rule-card:hover h3, 
+.rule-card:hover p {
+  color: #ffffff; /* 移上去時文字變白 */
+}
+
+/* 數字圖示樣式 */
+.rule-icon {
+  font-size: 0.8rem;
+  color: #B08426; /* 使用色卡的金棕色 */
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+
+.rule-card h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.2rem;
+  color: #403C50;
+  transition: color 0.3s;
+}
+
+.rule-card p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #626071;
+  line-height: 1.8;
+  transition: color 0.3s;
+}
+
+/* 手機版適應 */
+@media (max-width: 768px) {
+  .rules-container {
+    flex-direction: column; /* 手機版改為垂直堆疊 */
+  }
+}
