@@ -216,6 +216,25 @@
     };
   </script>
 
+  //===============================================================
+  //在點擊按鈕時，「切換」選單的出現與消失
+  <script>
+  const navToggle = document.querySelector('.nav-toggle');
+  const navMenu = document.querySelector('.nav-menu');
+
+  // 1. 點擊按鈕展開/收起
+  navToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+  });
+
+  // 2. 點擊選單項目後自動收起 (點了跳轉後不遮擋內容)
+  document.querySelectorAll('.nav-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      navMenu.classList.remove('active');
+    });
+  });
+</script>
+
   
 </body>
 
