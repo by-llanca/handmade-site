@@ -7,12 +7,17 @@
 
 body {
   margin: 0;
-  /* 頁面背景保持純白，讓紫色區塊更突出 */
-  background-color: #ffffff; 
-  font-family: system-ui, -apple-system, sans-serif;
-  line-height: 1.6;
-  /* 使用色卡 #626071：深灰紫文字 */
-  color: #626071; 
+  background-color: #ffffff;
+  /* 優先使用思源黑體，若讀取不到則使用系統預設黑體 */
+  font-family: 'Noto Sans TC', sans-serif; 
+  line-height: 1.8; /* 稍微加大行高，閱讀更友善 */
+  color: #626071;
+}
+
+/* 標題可以稍微加粗 */
+h1, h2, h3 {
+  font-weight: 700;
+  letter-spacing: 0.05em;
 }
 
 html {
