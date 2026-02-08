@@ -105,42 +105,56 @@ section h2 {
 /* =========================================
    4. 價目表表格設計 (使用色卡配色)
    ========================================= */
-.price-table {
-  width: 100%;
-  border-collapse: collapse;
+/* 價目表容器：使用 Flex 佈局讓卡片自適應 */
+.price-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* 類別卡片 */
+.price-category {
+  flex: 1;
+  min-width: 280px; /* 確保在手機上會變成一列 */
   background-color: #ffffff;
+  padding: 1.5rem;
   border-radius: 12px;
-  overflow: hidden;
-  /* 稍微加強投影，讓表格在白底上更有立體感 */
-  box-shadow: 0 10px 30px rgba(64, 60, 80, 0.08); 
-  /* 表格邊框點綴：金棕色 #B08426 */
-  border-top: 4px solid #B08426; 
+  border: 1px solid #D6CCDF;
+  box-shadow: 0 4px 12px rgba(64, 60, 80, 0.05);
 }
 
-.price-table th {
-  /* 表頭使用灰紫 #9B8CA7 (色卡第四色) */
-  background-color: #9B8CA7; 
-  color: white;
-  padding: 1.2rem;
-  text-align: left;
+/* 卡片小標題：使用金棕色點綴 */
+.price-category h3 {
+  margin-top: 0;
+  font-size: 1.1rem;
+  color: #B08426; 
+  border-bottom: 2px solid #D6CCDF;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
-.price-table td {
-  padding: 1.2rem;
-  /* 分隔線改用淺紫 */
-  border-bottom: 1px solid #D6CCDF; 
-}
-
-/* 第一欄分類：使用最淺紫 #D6CCDF 作為底色 */
-.price-table td:first-child {
-  background-color: #f6f1f8; 
+/* 具體項目排版：左右對齊 */
+.price-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+  font-size: 0.95rem;
   color: #403C50;
-  font-weight: bold;
 }
 
-.price-table tbody tr:hover {
-  /* 滑動時背景變為極淺紫 */
-  background-color: #fcfaff; 
+/* 強調價格數字 */
+.price-item span:last-child {
+  font-weight: bold;
+  color: #626071;
+}
+
+/* 類別備註 */
+.category-note {
+  font-size: 0.8rem;
+  color: #9B8CA7;
+  margin-top: 1rem;
+  font-style: italic;
 }
 
 /* =========================================
