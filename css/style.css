@@ -23,7 +23,7 @@ html {
    2. 頁首與導覽列 (使用色卡：#D6CCDF 淺紫)
    ========================================= */
 .site-header {
-  padding: 1rem 1.5rem; /* 縮小原本的 2.5rem */
+  padding: 1rem 1rem; 
   text-align: center;
   flex-direction: column; /* 維持垂直排列但縮小間距 */
   /* 使用色卡 #D6CCDF：淺紫色作為頂部大區塊底色 */
@@ -51,7 +51,7 @@ html {
 }
 
 .site-nav {
-  margin-top: 1.5rem;
+  margin-top: 1rem;
 }
 
 .site-nav ul {
