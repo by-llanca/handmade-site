@@ -214,22 +214,69 @@ section h2 {
 }
 
 /* =========================================
-   6. 頁尾與備註 (Footer)
+   6. 頁尾與精簡聯絡 (Updated Footer)
    ========================================= */
 .site-footer {
-  padding: 3rem 1rem;
+  padding: 2rem 1rem;
   text-align: center;
-  /* 頁尾使用最深色 #403C50，產生穩重的視覺結尾 */
-  background-color: #403C50; 
-  color: #D6CCDF; /* 文字用淺紫點綴 */
+  background-color: #403C50; /* 色卡深紫黑 */
+  color: #D6CCDF; /* 色卡淺紫 */
 }
 
-.price-note {
+.footer-container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* 聯絡按鈕列 */
+.footer-contact {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* 精簡版按鈕 */
+.footer-btn {
+  text-decoration: none;
+  color: #D6CCDF;
+  border: 1px solid #D6CCDF;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
   font-size: 0.85rem;
-  color: #9B8CA7;
-  border-left: 3px solid #B08426; /* 備註使用金棕色邊框強調 */
-  padding-left: 1rem;
-  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+/* 懸停效果：背景變淺紫，文字變深 */
+.footer-btn:hover {
+  background-color: #D6CCDF;
+  color: #403C50;
+}
+
+/* 針對 Plurk 加入一點金棕色強調邊緣 */
+.footer-btn.plurk {
+  border-color: #B08426; /* 使用金棕色提示優先 */
+  color: #f6f1f8; /* 稍微亮一點 */
+}
+
+.footer-btn.plurk:hover {
+  background-color: #B08426;
+  border-color: #B08426;
+  color: #ffffff;
+}
+
+/* 電腦版時讓版權和按鈕左右分開 */
+@media (min-width: 600px) {
+  .footer-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 /* =========================================
