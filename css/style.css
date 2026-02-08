@@ -210,3 +210,48 @@ section h2 {
   padding-left: 1rem;
   margin-top: 1rem;
 }
+
+/* =========================================
+   7. 點擊放大預覽 (Lightbox CSS)
+   ========================================= */
+
+/* 遮罩背景 */
+.lightbox {
+  display: none; /* 預設隱藏 */
+  position: fixed;
+  z-index: 2000; /* 高於 Header */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(64, 60, 80, 0.9); /* 使用色卡的深紫黑色，帶透明度 */
+  justify-content: center;
+  align-items: center;
+}
+
+/* 預覽圖片本人 */
+.lightbox-content {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  /* 進入動畫 */
+  animation: zoomIn 0.3s ease;
+}
+
+/* 關閉按鈕 */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #D6CCDF; /* 使用色卡的淺紫 */
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* 縮放動畫 */
+@keyframes zoomIn {
+  from {transform: scale(0.7); opacity: 0;}
+  to {transform: scale(1); opacity: 1;}
+}
