@@ -114,14 +114,21 @@ section h2 {
 }
 
 /* 類別卡片 */
+/* 修改第 4 區塊的類別卡片 */
 .price-category {
   flex: 1;
-  min-width: 280px; /* 確保在手機上會變成一列 */
-  background-color: #ffffff;
+  min-width: 280px;
+  background-color: #ffffff; /* 確保背景是純白 */
   padding: 1.5rem;
   border-radius: 12px;
   border: 1px solid #D6CCDF;
-  box-shadow: 0 4px 12px rgba(64, 60, 80, 0.05);
+  /* 加強陰影：將 0.05 改為 0.1，並增加擴散值 */
+  box-shadow: 0 8px 20px rgba(64, 60, 80, 0.1); 
+  transition: transform 0.3s ease; /* 增加滑過時的動態感 */
+}
+
+.price-category:hover {
+  transform: translateY(-5px); /* 讓價目表卡片滑過時也能微微浮起 */
 }
 
 /* 卡片小標題：使用金棕色點綴 */
