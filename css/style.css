@@ -144,7 +144,56 @@ section h2 {
 }
 
 /* =========================================
-   5. 頁尾與備註 (Footer)
+   5. 成品展示區樣式 (Gallery Grid)
+   ========================================= */
+
+/* 作品集小標題 */
+.gallery h3 {
+  font-size: 1.2rem;
+  color: #626071; /* 使用色卡的灰紫色 */
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+/* 網格容器：自動根據螢幕寬度排版 */
+.gallery-grid {
+  display: grid;
+  /* 每個格子最少 200px，剩餘空間自動分配 */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px; /* 圖片之間的間隔 */
+}
+
+/* 圖片容器：設定比例與效果 */
+.gallery-item {
+  aspect-ratio: 1 / 1; /* 保持正方形 */
+  overflow: hidden;
+  border-radius: 8px; /* 圓角感 */
+  background-color: #f6f1f8; /* 載入前的淺紫底色 */
+  box-shadow: 0 4px 10px rgba(64, 60, 80, 0.05);
+  transition: transform 0.3s ease;
+}
+
+/* 圖片本身設定 */
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 自動裁切圖片以填滿格子，不變形 */
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+/* 滑鼠懸停效果：放大圖片並微浮起 */
+.gallery-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(64, 60, 80, 0.15);
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1); /* 圖片輕微放大 */
+}
+
+/* =========================================
+   6. 頁尾與備註 (Footer)
    ========================================= */
 .site-footer {
   padding: 3rem 1rem;
