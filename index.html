@@ -102,7 +102,7 @@
       <li>不接急單，請禮貌溝通。</li>
       <li>作品可能會作為展示案例上傳。</li>
     </ul>
-</section>
+  </section>
     
   </main>
 
@@ -110,12 +110,44 @@
     <p>© 2026 浪嘎手作</p>
   </footer>
 
-  /* 「燈箱容器」*/
+  /* =========================================
+    「點擊大圖預覽」的效果
+   ========================================= */
+
+  /* 燈箱容器 */
   <div id="lightbox" class="lightbox">
     <span class="close-btn">&times;</span>
     <img class="lightbox-content" id="lightbox-img">
   </div>
 
+  /* JavaScript 功能，偵測點擊了哪張圖 */
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const closeBtn = document.querySelector('.close-btn');
+  
+    // 1. 幫所有展示圖片加上「點擊」功能
+    document.querySelectorAll('.gallery-item img').forEach(image => {
+      image.onclick = () => {
+        lightbox.style.display = 'flex'; // 顯示遮罩
+        lightboxImg.src = image.src;    // 把大圖的來源換成被點擊那張圖
+      };
+    });
+  
+    // 2. 點擊關閉按鈕時隱藏
+    closeBtn.onclick = () => {
+      lightbox.style.display = 'none';
+    };
+  
+    // 3. 點擊背景空白處也能關閉
+    lightbox.onclick = (e) => {
+      if (e.target !== lightboxImg) {
+        lightbox.style.display = 'none';
+      }
+    };
+  </script>
+
+  
 </body>
 
 </html>
