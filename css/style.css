@@ -118,7 +118,7 @@ section {
    
   margin-bottom: 4rem;
   min-height: 50vh;
-  padding-top: 2rem; /* 預留空間給 Sticky Header *//* padding-top 可以視情況調小，因為現在有 scroll-margin 了 */
+  padding-top: 1.8rem; /* 預留空間給 Sticky Header *//* padding-top 可以視情況調小，因為現在有 scroll-margin 了 */
 }
 
 section h2 {
@@ -137,7 +137,7 @@ section h2 {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
-  margin-top: 2rem;
+  margin-top: 1.8rem;
 }
 
 /* 類別卡片 */
