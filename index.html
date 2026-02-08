@@ -14,23 +14,18 @@
 <body>
 
   <header class="site-header">
-  <div class="header-container">
-    <h1 class="site-title">浪嘎手作委託</h1>
-    
-    <nav class="site-nav">
-      <button class="nav-toggle" aria-label="切換選單">
-        <i class="fa-solid fa-bars"></i>
-      </button>
+    <h1 class="site-title">浪嘎手作棉花娃</h1>
+    <p class="site-subtitle">非專職手作，目前排單工期約 1-2 個月，謝謝耐心等待。</p>
 
-      <ul class="nav-menu">
-        <li><a href="#prices">價目表</a></li>
-        <li><a href="#process">委託流程</a></li>
-        <li><a href="#gallery">成品展示</a></li>
-        <li><a href="#rules">注意事項</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+    <nav class="site-nav">
+    <ul>
+      <li><a href="#process">委託流程</a></li>
+      <li><a href="#prices">價目參考</a></li>
+      <li><a href="#gallery">成品展示</a></li>
+      <li><a href="#rules">注意事項</a></li>
+    </ul>
+  </nav>
+  </header>
 
   <main>
 
@@ -217,23 +212,26 @@
   </script>
 
   <!-- ===============================================================
-  在點擊按鈕時，「切換」選單的出現與消失 -->
+  加入自動隱藏 Header 的 JavaScript -->
   <script>
-  const navToggle = document.querySelector('.nav-toggle');
-  const navMenu = document.querySelector('.nav-menu');
-
-  // 1. 點擊按鈕展開/收起
-  navToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-  });
-
-  // 2. 點擊選單項目後自動收起 (點了跳轉後不遮擋內容)
-  document.querySelectorAll('.nav-menu a').forEach(link => {
-    link.addEventListener('click', () => {
-      navMenu.classList.remove('active');
+    let lastScrollY = window.scrollY;
+    const header = document.querySelector('.site-header');
+  
+    window.addEventListener('scroll', () => {
+      const currentScrollY = window.scrollY;
+  
+      // 判斷捲動方向
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        // 向下捲動且超過 100px：隱藏 Header
+        header.classList.add('header-hidden');
+      } else {
+        // 向上捲動：顯示 Header
+        header.classList.remove('header-hidden');
+      }
+  
+      lastScrollY = currentScrollY;
     });
-  });
-</script>
+  </script>
 
   
 </body>
