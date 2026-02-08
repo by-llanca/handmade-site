@@ -23,14 +23,16 @@ html {
    2. 頁首與導覽列 (使用色卡：#D6CCDF 淺紫)
    ========================================= */
 .site-header {
-  padding: 2.5rem 1rem;
+  padding: 1rem 1.5rem; /* 縮小原本的 2.5rem */
   text-align: center;
+  flex-direction: column; /* 維持垂直排列但縮小間距 */
   /* 使用色卡 #D6CCDF：淺紫色作為頂部大區塊底色 */
   background-color: #D6CCDF; 
+  /* 固定選單效果：滾動時選單會卡在螢幕最上方 */
   position: sticky;
   top: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 15px rgba(64, 60, 80, 0.1);
+  z-index: 1000; /* 確保選單層級最高，不會被其他內容遮住 */
+  box-shadow: 0 2px 15px rgba(64, 60, 80, 0.1); /* 淡淡的紫色投影，增加立體感 */
 }
 
 .site-title {
@@ -83,9 +85,13 @@ main {
 }
 
 section {
+  /* 數值建議設定為你的 Header 總高度加上一點緩衝空間 */
+  /* 如果你的 Header 高度約為 100px，我們設定 120px 左右 */
+  scroll-margin-top: 130px;
+   
   margin-bottom: 4rem;
   min-height: 50vh;
-  padding-top: 6rem; /* 預留空間給 Sticky Header */
+  padding-top: 2rem; /* 預留空間給 Sticky Header *//* padding-top 可以視情況調小，因為現在有 scroll-margin 了 */
 }
 
 section h2 {
