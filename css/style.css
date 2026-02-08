@@ -27,19 +27,65 @@ html {
 /* =========================================
    2. 頁首與導覽列 (使用色卡：#D6CCDF 淺紫)
    ========================================= */
+/* 修改原本的 .site-header 設定 */
 .site-header {
-  padding: 1rem 1rem; 
-  text-align: center;
-  flex-direction: column; /* 維持垂直排列但縮小間距 */
-  /* 使用色卡 #D6CCDF：淺紫色作為頂部大區塊底色 */
-  background-color: #D6CCDF; 
-  /* 固定選單效果：滾動時選單會卡在螢幕最上方 */
   position: sticky;
   top: 0;
-  z-index: 1000; /* 確保選單層級最高，不會被其他內容遮住 */
-  box-shadow: 0 2px 15px rgba(64, 60, 80, 0.1); /* 淡淡的紫色投影，增加立體感 */
+  z-index: 1000;
+  background-color: #D6CCDF;
+  padding: 0.8rem 1rem;
 }
 
+/* 預設隱藏漢堡按鈕 (電腦版) */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #403C50;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* 手機版樣式 (768px 以下) */
+@media (max-width: 768px) {
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-toggle {
+    display: block; /* 顯示漢堡按鈕 */
+  }
+
+  .nav-menu {
+    display: none; /* 預設隱藏清單 */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #D6CCDF;
+    flex-direction: column; /* 改為垂直排列 */
+    gap: 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+
+  /* 當選單被啟動時顯示 */
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-menu li {
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid rgba(64, 60, 80, 0.1);
+  }
+
+  .nav-menu a {
+    display: block;
+    padding: 1rem;
+  }
+}
 .site-title {
   margin: 0;
   font-size: 2.2rem;
