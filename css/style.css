@@ -25,67 +25,43 @@ html {
 }
 
 /* =========================================
-   2. 頁首與導覽列 (使用色卡：#D6CCDF 淺紫)
+   2. 頁首設定 (加上自動隱藏的動畫)
    ========================================= */
-/* 修改原本的 .site-header 設定 */
 .site-header {
+  padding: 0.6rem 1rem; 
+  text-align: center;
+  background-color: #D6CCDF;
   position: sticky;
   top: 0;
   z-index: 1000;
-  background-color: #D6CCDF;
-  padding: 0.8rem 1rem;
+  box-shadow: 0 2px 15px rgba(64, 60, 80, 0.1);
+  
+  /* 關鍵：加上平滑位移效果 */
+  transition: transform 0.3s ease-in-out; 
 }
 
-/* 預設隱藏漢堡按鈕 (電腦版) */
-.nav-toggle {
-  display: none;
-  background: none;
-  border: none;
-  color: #403C50;
-  font-size: 1.5rem;
-  cursor: pointer;
+/* 當網頁偵測到向下捲動時，我們會用 JS 幫它加上這個 class */
+.header-hidden {
+  transform: translateY(-100%);
 }
 
-/* 手機版樣式 (768px 以下) */
-@media (max-width: 768px) {
-  .header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .nav-toggle {
-    display: block; /* 顯示漢堡按鈕 */
-  }
-
-  .nav-menu {
-    display: none; /* 預設隱藏清單 */
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background-color: #D6CCDF;
-    flex-direction: column; /* 改為垂直排列 */
-    gap: 0;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  }
-
-  /* 當選單被啟動時顯示 */
-  .nav-menu.active {
-    display: flex;
-  }
-
-  .nav-menu li {
-    width: 100%;
-    text-align: center;
-    border-top: 1px solid rgba(64, 60, 80, 0.1);
-  }
-
-  .nav-menu a {
-    display: block;
-    padding: 1rem;
-  }
+.site-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0 0;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem; /* 手機版間距縮小一點點以免溢出 */
 }
+
+/* 確保手機版標題不要太大，節省垂直空間 */
+@media (max-width: 600px) {
+  .site-title { font-size: 1.4rem; }
+  .site-nav ul { gap: 1rem; font-size: 0.9rem; }
+}
+
+
+
 .site-title {
   margin: 0;
   font-size: 2.2rem;
