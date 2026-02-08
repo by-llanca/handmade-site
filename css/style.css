@@ -111,21 +111,29 @@ main {
   padding: 2rem 1rem;
 }
 
+/* =========================================
+   統一區塊間距規範
+   ========================================= */
 section {
-  /* 數值建議設定為你的 Header 總高度加上一點緩衝空間 */
-  /* 如果你的 Header 高度約為 100px，我們設定 120px 左右 */
-  scroll-margin-top: 130px;
-   
-  margin-bottom: 4rem;
-  min-height: 50vh;
-  padding-top: 1.8rem; /* 預留空間給 Sticky Header *//* padding-top 可以視情況調小，因為現在有 scroll-margin 了 */
+  /* 1. 統一跳轉後的留白 (對齊選單高度) */
+  scroll-margin-top: 100px; 
+  /* 2. 統一區塊間的距離：移除原本混亂的 padding */
+  padding-top: 0; 
+  /* 3. 使用 margin-bottom 作為唯一的間距來源 */
+  margin-bottom: 6rem; /* 你可以根據喜好調整這個數值，例如 4rem ~ 8rem */
 }
 
+/* 移除最後一個區塊的下邊距，避免頁尾上方留白過大 */
+section:last-of-type {
+  margin-bottom: 4rem;
+}
+
+/* 統一標題下方的留白 */
 section h2 {
-  margin-bottom: 1.8rem;
+  margin-top: 0;
+  margin-bottom: 2.5rem; /* 讓標題與下方內容的距離一致 */
   color: #403C50;
-  /* 使用淺紫 #D6CCDF 製作標題裝飾線 */
-  border-left: 6px solid #D6CCDF; 
+  border-left: 6px solid #D6CCDF;
   padding-left: 15px;
 }
 
@@ -137,7 +145,7 @@ section h2 {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
-  margin-top: 1.8rem;
+  margin-top: 0;
 }
 
 /* 類別卡片 */
