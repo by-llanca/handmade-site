@@ -468,13 +468,13 @@ section h2 {
    10. 委託流程時間軸 (Timeline CSS)
    ========================================= */
 .process-section {
-  padding-bottom: 2rem;
+  padding-bottom: 4rem;
 }
 
 .timeline {
   position: relative;
   max-width: 800px;
-  margin: 2rem auto;
+  margin: 1rem auto;
   padding: 0 1rem;
 }
 
