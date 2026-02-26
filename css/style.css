@@ -540,56 +540,110 @@ section h2 {
   line-height: 1.6;
 }
 
-/* 產品式價目表 */
 
-.product-list {
 
-  display: flex;
 
-  flex-direction: column;
+/* ===== 產品型價目表 ===== */
 
-  gap: 4rem;
+
+.product-wrapper {
+
+display: flex;
+
+flex-direction: column;
+
+gap: 5rem;
+
+}
+
+
+
+.product-row {
+
+display: flex;
+
+gap: 3rem;
+
+align-items: flex-start;
 
 }
 
 
-.product-block {
 
-  text-align: center;
+.product-left {
+
+flex: 0 0 250px;
 
 }
+
+
+
+.product-right {
+
+flex: 1;
+
+}
+
 
 
 .product-image {
 
-  width: 220px;
+width: 100%;
 
-  border-radius: 12px;
+border-radius: 12px;
 
-  margin-bottom: 1rem;
-
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+box-shadow: 0 8px 20px rgba(64,60,80,0.15);
 
 }
+
 
 
 .product-title {
 
-  margin: 0.5rem 0;
+margin-top: 0;
 
-  color: #403C50;
+margin-bottom: 10px;
+
+font-size: 1.6rem;
+
+color: #403C50;
 
 }
 
 
-.product-base-price {
 
-  font-size: 1.3rem;
+.product-price {
 
-  font-weight: bold;
+font-size: 1.4rem;
 
-  margin-bottom: 2rem;
+font-weight: bold;
 
-  color: #B08426;
+color: #B08426;
+
+margin-bottom: 25px;
+
+}
+
+
+
+/* 手機版 */
+
+@media (max-width: 768px)
+
+{
+
+.product-row {
+
+flex-direction: column;
+
+}
+
+
+.product-left {
+
+width: 100%;
+
+}
+
 
 }
