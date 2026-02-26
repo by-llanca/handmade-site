@@ -647,3 +647,30 @@ width: 100%;
 
 
 }
+
+
+
+.price-note {
+
+display: flex;
+
+align-items: center;
+
+gap: 8px;
+
+color: #666;
+
+font-size: 0.95rem;
+
+margin-top: 10px;
+
+}
+
+
+.note-icon {
+
+display: flex;
+
+color: #B08426;
+
+}
