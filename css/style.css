@@ -650,27 +650,44 @@ width: 100%;
 
 
 
-.price-note {
+.price-note-list {
 
-display: flex;
+list-style: none;
 
-align-items: center;
+padding: 15px;
 
-gap: 8px;
+margin-top: 20px;
 
-color: #666;
+background: #faf8f3;
 
-font-size: 0.95rem;
-
-margin-top: 10px;
+border-radius: 10px;
 
 }
 
 
-.note-icon {
+.price-note-list li {
 
 display: flex;
 
+align-items: flex-start;
+
+gap: 8px;
+
+margin-bottom: 8px;
+
+color: #555;
+
+font-size: 0.95rem;
+
+}
+
+
+.price-note-list svg {
+
 color: #B08426;
+
+flex-shrink: 0;
+
+margin-top: 3px;
 
 }
