@@ -88,6 +88,32 @@
       <div class="product-row">
       
       <div class="product-left">
+
+      <div class="gallery">
+      
+      <img id="normal-main"
+      src="images/n01.JPG"
+      class="gallery-main fade">
+      
+      
+      
+      <div class="gallery-thumbnails">
+      
+      <img src="images/n01.JPG"
+      class="thumb active"
+      onclick="changeImage(this,'normal-main')">
+      
+      
+      <img src="images/n02.JPG"
+      class="thumb"
+      onclick="changeImage(this,'normal-main')">
+      
+      
+      </div>
+      
+      </div>
+      
+      </div>
       
       <img src="images/n08.JPG" alt="正常體" class="product-image">
       
@@ -405,6 +431,44 @@
     });
   </script>
 
+  <script>
+
+    function changeImage(element, targetId)
+    {
+    
+    const main =
+    document.getElementById(targetId);
+    
+    
+    main.src = element.src;
+    
+    
+    /* 淡入動畫重置 */
+    
+    main.classList.remove("fade");
+    
+    void main.offsetWidth;
+    
+    main.classList.add("fade");
+    
+    
+    
+    /* 移除其他 active */
+    
+    const thumbs =
+    element.parentElement.querySelectorAll(".thumb");
+    
+    
+    thumbs.forEach(t =>
+    t.classList.remove("active"));
+    
+    
+    
+    element.classList.add("active");
+    
+    }
+    
+  </script>
   
 </body>
 
