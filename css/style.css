@@ -810,3 +810,32 @@ height:60px;
 }
 
 }
+
+
+/* =========================
+   照片版型標籤
+========================= */
+
+.thumb-wrapper{
+  position:relative;
+}
+
+/* 標籤本體 */
+.thumb-label{
+  position:absolute;
+  top:6px;
+  left:6px;
+  background-color:#403C50;
+  color:white;
+  font-size:0.7rem;
+  padding:3px 8px;
+  border-radius:6px;
+  z-index:2;
+  pointer-events:none;
+  letter-spacing:1px;
+}
+
+/* 舊版型淡一點 */
+.thumb-label.old{
+  background-color:#9B8CA7;
+}
