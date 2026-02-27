@@ -839,3 +839,90 @@ height:60px;
 .thumb-label.old{
   background-color:#9B8CA7;
 }
+
+/* =========================
+   品項說明
+========================= */
+
+.product01-note-list {
+
+list-style: none;
+
+padding: 15px;
+
+margin-top: 10px;
+
+background: #fcfaff;
+
+border-radius: 10px;
+
+}
+
+.product01-note-list li {
+
+display: flex;
+
+align-items: flex-start;
+
+gap: 8px;
+
+margin-bottom: 8px;
+
+color: #555;
+
+font-size: 0.95rem;
+
+}
+
+.product01-note-list svg {
+
+color: #B08426;
+
+flex-shrink: 0;
+
+margin-top: 3px;
+
+}
+
+
+.product02-note-list {
+
+list-style: none;
+
+padding: 15px;
+
+margin-top: 10px;
+
+background: #fcfaff;
+
+border-radius: 10px;
+
+}
+
+
+.product02-note-list li {
+
+display: flex;
+
+align-items: flex-start;
+
+gap: 8px;
+
+margin-bottom: 8px;
+
+color: #555;
+
+font-size: 0.95rem;
+
+}
+
+
+.product02-note-list svg {
+
+color: #B08426;
+
+flex-shrink: 0;
+
+margin-top: 3px;
+
+}
