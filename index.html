@@ -100,15 +100,21 @@
 
       <div class="gallery-thumbnails">
 
-        <img src="images/n08.JPG"
-        class="thumb active"
-        onclick="changeImage(this,'normal-main')">
-
-        <img src="images/n05.JPG"
-        class="thumb"
-        onclick="changeImage(this,'normal-main')">
-
+      <div class="thumb-wrapper">
+        <span class="thumb-label">新版型（默認）</span>
+        <img src="images/n01.JPG"
+             class="thumb active"
+             onclick="changeImage(this,'normal-main')">
       </div>
+    
+      <div class="thumb-wrapper">
+        <span class="thumb-label old">舊版型</span>
+        <img src="images/n05.JPG"
+             class="thumb"
+             onclick="changeImage(this,'normal-main')">
+      </div>
+    
+    </div>
 
     </div>
 
