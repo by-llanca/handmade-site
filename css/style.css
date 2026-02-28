@@ -878,3 +878,6 @@ font-size: 0.95rem;
 
 }
 
+.clickable-image{
+  cursor: zoom-in;
+}
