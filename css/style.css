@@ -884,7 +884,7 @@ margin-top: 3px;
 
 }
 
-/* 
+
 .product02-note-list {
 
 list-style: none;
@@ -914,10 +914,10 @@ color: #555;
 
 font-size: 0.95rem;
 
-} */
+}
 
 
-.product02-note-list{
+/* .product02-note-list{
   list-style:none;
   padding:0;
 }
@@ -930,8 +930,8 @@ font-size: 0.95rem;
 }
 
 /* FontAwesome icon */
-.product02-note-list i{
+/* .product02-note-list i{
   color:#B08426;   /* 你的金棕色 */
   margin-top:3px;
   font-size:0.9rem;
-}
+} */ */
