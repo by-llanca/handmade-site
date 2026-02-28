@@ -708,8 +708,6 @@ transition: opacity 0.3s ease;
 
 }
 
-
-
 /* 淡入動畫 */
 
 .fade {
@@ -717,7 +715,6 @@ transition: opacity 0.3s ease;
 animation: fadeEffect 0.4s;
 
 }
-
 
 @keyframes fadeEffect {
 
@@ -803,19 +800,6 @@ height:60px;
 }
 
 /* 標籤本體 */
-/* .thumb-label{
-  position:absolute;
-  top:6px;
-  left:6px;
-  background-color:#403C50;
-  color:white;
-  font-size:0.7rem;
-  padding:3px 8px;
-  border-radius:6px;
-  z-index:2;
-  pointer-events:none;
-  letter-spacing:1px;
-} */
 .thumb-label{
   position:absolute;
   top:6px;
@@ -831,9 +815,6 @@ height:60px;
 /* =========================
    品項說明
 ========================= */
-
-
-
 .product01-note-list {
 
 list-style: none;
