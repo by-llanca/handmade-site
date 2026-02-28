@@ -96,7 +96,7 @@
 
       <img id="normal-main"
       src="images/n08.JPG"
-      class="gallery-main fade">
+      class="gallery-main fade clickable-image">
 
       <div class="gallery-thumbnails">
 
@@ -441,6 +441,31 @@
       lastScrollY = currentScrollY;
     });
   </script>
+
+
+  <!-- 價目參考的品項縮圖 -->
+  <script>
+  
+  document.querySelectorAll(".clickable-image")
+  .forEach(img => {
+  
+    img.addEventListener("click", () => {
+  
+      const lightbox =
+        document.getElementById("lightbox");
+  
+      const lightboxImg =
+        document.getElementById("lightbox-img");
+  
+      lightbox.style.display = "flex";
+      lightboxImg.src = img.src;
+  
+    });
+  
+  });
+  
+  </script>
+  
 
   <script>
 
