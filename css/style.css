@@ -747,52 +747,34 @@ padding-bottom: 5px;
 
 
 
-/* 縮圖 */
+/* ===== 縮圖系統 ===== */
 
-.thumb {
+.thumb{
+  width:70px;
+  height:70px;
+  object-fit:cover;
+  border-radius:8px;
+  cursor:pointer;
 
-width: 70px;
+  opacity:0.45;              /* ⭐預設淡化 */
+  border:2px solid transparent;
 
-height: 70px;
-
-object-fit: cover;
-
-border-radius: 8px;
-
-cursor: pointer;
-
-opacity: 0.6;
-
-border: 2px solid transparent;
-
-transition: all 0.3s;
-
-flex-shrink: 0;
-
+  transition:all .25s ease;
+  flex-shrink:0;
 }
 
 
-
-/* hover */
-
-.thumb:hover {
-
-opacity: 1;
-
-transform: scale(1.05);
-
+/* hover 稍微亮 */
+.thumb:hover{
+  opacity:0.75;
 }
 
 
-
-/* 選中 */
-
-.thumb.active {
-
-opacity: 1;
-
-border-color: #B08426;
-
+/* ⭐唯一高亮來源 */
+.thumb.active{
+  opacity:1;
+  border-color:#B08426;
+  transform:scale(1.05);
 }
 
 
