@@ -832,6 +832,8 @@ height:60px;
    品項說明
 ========================= */
 
+
+
 .product01-note-list {
 
 list-style: none;
@@ -846,29 +848,20 @@ border-radius: 10px;
 
 }
 
+
 .product01-note-list li {
 
 display: flex;
 
-align-items: flex-start;
+align-items: center;
 
 gap: 8px;
 
-margin-bottom: 8px;
+margin-bottom: 0.6px;
 
 color: #555;
 
 font-size: 0.95rem;
-
-}
-
-.product01-note-list svg {
-
-color: #B08426;
-
-flex-shrink: 0;
-
-margin-top: 3px;
 
 }
 
@@ -904,22 +897,3 @@ font-size: 0.95rem;
 
 }
 
-
-/* .product02-note-list{
-  list-style:none;
-  padding:0;
-}
-
-.product02-note-list li{
-  display:flex;
-  align-items:flex-start;
-  gap:10px;
-  margin-bottom:0.6rem;
-}
-
-/* FontAwesome icon */
-/* .product02-note-list i{
-  color:#B08426;   /* 你的金棕色 */
-  margin-top:3px;
-  font-size:0.9rem;
-} */ */
