@@ -803,7 +803,7 @@ height:60px;
 }
 
 /* 標籤本體 */
-.thumb-label{
+/* .thumb-label{
   position:absolute;
   top:6px;
   left:6px;
@@ -815,11 +815,17 @@ height:60px;
   z-index:2;
   pointer-events:none;
   letter-spacing:1px;
-}
-
-/* 舊版型淡一點 */
-.thumb-label.old{
-  background-color:#9B8CA7;
+} */
+.thumb-label{
+  position:absolute;
+  top:6px;
+  left:6px;
+  background-color:#403C50;
+  color:white;
+  font-size:0.7rem;
+  padding:3px 8px;
+  border-radius:6px;
+  pointer-events:none;
 }
 
 /* =========================
