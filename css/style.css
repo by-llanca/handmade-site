@@ -917,12 +917,21 @@ font-size: 0.95rem;
 }
 
 
-.product02-note-list svg {
+.product02-note-list{
+  list-style:none;
+  padding:0;
+}
 
-color: #B08426;
+.product02-note-list li{
+  display:flex;
+  align-items:flex-start;
+  gap:10px;
+  margin-bottom:0.6rem;
+}
 
-flex-shrink: 0;
-
-margin-top: 3px;
-
+/* FontAwesome icon */
+.product02-note-list i{
+  color:#B08426;   /* 你的金棕色 */
+  margin-top:3px;
+  font-size:0.9rem;
 }
