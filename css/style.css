@@ -917,6 +917,9 @@ line-height: 1.6;
   margin-top: 3px;
 }
 
+.product02-note-list {
+    margin-bottom: 0;
+}
 .price-note-list {
     margin-top: 12px;     /* 往上貼近紫色 */
     margin-bottom: 40px;  /* 與成品展示保留空間 */
