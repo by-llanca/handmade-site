@@ -918,17 +918,12 @@ line-height: 1.6;
    font-size: 0.95rem;
    color: #B08426;
 }
-/* .price-note-list svg,
-.product01-note-list svg,
-.product02-note-list svg {
-  flex-shrink: 0;
-  margin-top: 3px;
-} */
+
 
 .product02-note-list {
     margin-bottom: 0;
 }
 .price-note-list {
-    margin-top: 12px;     /* 往上貼近紫色 */
+    margin-top: 20px;     /* 往上貼近紫色 */
     margin-bottom: 40px;  /* 與成品展示保留空間 */
 }
