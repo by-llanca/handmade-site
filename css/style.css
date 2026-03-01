@@ -899,5 +899,6 @@ line-height: 1.6;
     margin-bottom: 0;
 }
 .price-note-list {
+    margin-top: -10px,
     margin-bottom: 40px;  /* 與成品展示保留空間 */
 }
