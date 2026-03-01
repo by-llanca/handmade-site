@@ -898,24 +898,32 @@ line-height: 1.6;
   margin:0.8rem 0 0 0;   /* ⭐統一上間距 */
 }
 
-.price-note-list li,
 .product01-note-list li,
 .product02-note-list li {
   display: flex;
   align-items: center;
   gap: 8px;
-
   margin-bottom: 8px;
   line-height: 1.6;      /* ⭐與 price-note-list 一致 */
   font-size: 0.95rem;
   color: #555;
 }
-.price-note-list svg,
+.price-note-list li i,
+.price-note-list li::before {
+   display: flex;
+   align-items: center;
+   gap: 8px;
+   margin-bottom: 8px;
+   line-height: 1.6;      /* ⭐與 price-note-list 一致 */
+   font-size: 0.95rem;
+   color: #B08426;
+}
+/* .price-note-list svg,
 .product01-note-list svg,
 .product02-note-list svg {
   flex-shrink: 0;
   margin-top: 3px;
-}
+} */
 
 .product02-note-list {
     margin-bottom: 0;
