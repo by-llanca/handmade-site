@@ -680,17 +680,6 @@ font-size: 0.95rem;
 }
 
 
-.price-note-list svg {
-
-color: #B08426;
-
-flex-shrink: 0;
-
-margin-top: 3px;
-
-}
-
-
 /* ===== 作品展示系統 ===== */
 
 
@@ -815,19 +804,13 @@ height:60px;
 ========================= */
 .product01-note-list {
 
-list-style: none;
-
-padding: 15px;
-
-margin-top: 10px;
-
 background: #fcfaff;
 
 border-radius: 10px;
 
 }
 
-
+/* 
 .product01-note-list li {
 
 display: flex;
@@ -844,16 +827,10 @@ font-size: 0.95rem;
 
 line-height: 1.6;
 
-}
+} */
 
 
 .product02-note-list {
-
-list-style: none;
-
-padding: 15px;
-
-margin-top: 10px;
 
 background: #fcfaff;
 
@@ -861,7 +838,7 @@ border-radius: 10px;
 
 }
 
-
+/* 
 .product02-note-list li {
 
 display: flex;
@@ -877,7 +854,7 @@ color: #555;
 font-size: 0.95rem;
 
 line-height: 1.6;
-}
+} */
 
 .clickable-image{
   cursor: zoom-in;
@@ -922,6 +899,5 @@ line-height: 1.6;
     margin-bottom: 0;
 }
 .price-note-list {
-    margin-top: 20px;     /* 往上貼近紫色 */
     margin-bottom: 40px;  /* 與成品展示保留空間 */
 }
