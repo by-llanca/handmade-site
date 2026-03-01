@@ -902,7 +902,7 @@ line-height: 1.6;
 .product01-note-list li,
 .product02-note-list li {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 8px;
 
   margin-bottom: 8px;
