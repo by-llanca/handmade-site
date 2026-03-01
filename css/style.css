@@ -552,7 +552,7 @@ display: flex;
 
 flex-direction: column;
 
-gap: 5rem;
+gap: 2rem;
 
 }
 
@@ -648,28 +648,6 @@ width: 100%;
 
 }
 
-/* ===============================
-   Note List 統一設定
-=============================== */
-
-.price-note-list,
-.product01-note-list,
-.product02-note-list{
-  list-style:none;
-  padding:0;
-  margin:1rem 0 0 0;   /* ⭐統一上間距 */
-}
-
-.price-note-list li,
-.product01-note-list li,
-.product02-note-list li{
-  display:flex;
-  align-items:flex-start;
-  gap:10px;
-
-  line-height:1.6;     /* ⭐統一文字行距 */
-  margin-bottom:0.5rem;
-}
 
 
 .price-note-list {
@@ -905,4 +883,36 @@ line-height: 1.6;
 
 .clickable-image{
   cursor: zoom-in;
+}
+
+
+/* ===============================
+   Note List 統一設定
+=============================== */
+
+.price-note-list,
+.product01-note-list,
+.product02-note-list{
+  list-style:none;
+  padding:15px;
+  margin:0.8rem 0 0 0;   /* ⭐統一上間距 */
+}
+
+.price-note-list li,
+.product01-note-list li,
+.product02-note-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+
+  margin-bottom: 8px;
+  line-height: 1.6;      /* ⭐與 price-note-list 一致 */
+  font-size: 0.95rem;
+  color: #555;
+}
+.price-note-list svg,
+.product01-note-list svg,
+.product02-note-list svg {
+  flex-shrink: 0;
+  margin-top: 3px;
 }
