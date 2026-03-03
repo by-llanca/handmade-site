@@ -879,7 +879,7 @@ border-radius: 10px;
 .product02-note-list,
 .middle-note-list,
 .price-note-list {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .middle-note-list {
@@ -895,4 +895,8 @@ border-radius: 10px;
     line-height: 1.8;
     gap: 8px;
     color: #B08426;
+}
+
+.middle-note-list {
+    margin-bottom: 40px;
 }
