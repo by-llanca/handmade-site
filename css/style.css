@@ -894,9 +894,21 @@ line-height: 1.6;
    color: #B08426;
 }
 
-.product02-note-list {
-    margin-bottom: 0;
-}
+.product02-note-list,
+.middle-note-list,
 .price-note-list {
-    margin-bottom: 40px;  /* 與成品展示保留空間 */
+    margin-bottom: 24px;
+}
+
+.middle-note-list {
+    background: #f6f2e8;
+    border-radius: 12px;
+    padding: 18px 22px;
+    list-style: none;
+}
+
+.middle-note-list li {
+    display: flex;
+    align-items: center;
+    line-height: 1.8;
 }
