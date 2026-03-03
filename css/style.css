@@ -901,7 +901,7 @@ line-height: 1.6;
 }
 
 .middle-note-list {
-    background: #f6f2e8;
+    background: #faf8f3;
     border-radius: 12px;
     padding: 18px 22px;
     list-style: none;
@@ -911,4 +911,5 @@ line-height: 1.6;
     display: flex;
     align-items: center;
     line-height: 1.8;
+    color: #B08426;
 }
