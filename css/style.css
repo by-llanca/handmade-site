@@ -10,11 +10,11 @@ body {
   background-color: #ffffff;
   /* 優先使用思源黑體，若讀取不到則使用系統預設黑體 */
   font-family: 'Noto Sans TC', sans-serif; 
-  line-height: 1.6; /* 稍微加大行高，閱讀更友善 */
+  line-height: 1.6; /* 行高 */
   color: #626071;
 }
 
-/* 標題可以稍微加粗 */
+/* 標題加粗 */
 h1, h2, h3 {
   font-weight: 700;
   letter-spacing: 0.05em;
@@ -36,11 +36,10 @@ html {
   z-index: 1000;
   box-shadow: 0 2px 15px rgba(64, 60, 80, 0.1);
   
-  /* 關鍵：加上平滑位移效果 */
+  /* 平滑位移效果 */
   transition: transform 0.3s ease-in-out; 
 }
 
-/* 當網頁偵測到向下捲動時，我們會用 JS 幫它加上這個 class */
 .header-hidden {
   transform: translateY(-100%);
 }
@@ -51,7 +50,7 @@ html {
   margin: 0.5rem 0 0 0;
   display: flex;
   justify-content: center;
-  gap: 1.5rem; /* 手機版間距縮小一點點以免溢出 */
+  gap: 1.5rem; /* 手機版間距縮小 */
 }
 
 /* 確保手機版標題不要太大，節省垂直空間 */
@@ -65,7 +64,7 @@ html {
 .site-title {
   margin: 0;
   font-size: 2.2rem;
-  /* 使用色卡 #403C50：最深的紫黑色，確保標題醒目 */
+  /* 使用色卡 #403C50：紫黑色 */
   color: #403C50; 
   letter-spacing: 2px;
 }
@@ -117,10 +116,10 @@ main {
 section {
   /* 1. 統一跳轉後的留白 (對齊選單高度) */
   scroll-margin-top: 100px; 
-  /* 2. 統一區塊間的距離：移除原本混亂的 padding */
+  /* 2. 統一區塊間的距離 */
   padding-top: 0; 
   /* 3. 使用 margin-bottom 作為唯一的間距來源 */
-  margin-bottom: 6rem; /* 你可以根據喜好調整這個數值，例如 4rem ~ 8rem */
+  margin-bottom: 6rem; 
 }
 
 /* 移除最後一個區塊的下邊距，避免頁尾上方留白過大 */
@@ -149,7 +148,6 @@ section h2 {
 }
 
 /* 類別卡片 */
-/* 修改第 4 區塊的類別卡片 */
 .price-category {
   flex: 1;
   min-width: 280px;
@@ -185,7 +183,7 @@ section h2 {
   color: #403C50;
 }
 
-/* 強調價格數字 */
+/* 價格數字 */
 .price-item span:last-child {
   font-weight: bold;
   color: #626071;
@@ -327,12 +325,12 @@ section h2 {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(64, 60, 80, 0.9); /* 使用色卡的深紫黑色，帶透明度 */
+  background-color: rgba(64, 60, 80, 0.9); 
   justify-content: center;
   align-items: center;
 }
 
-/* 預覽圖片本人 */
+/* 預覽圖片 */
 .lightbox-content {
   max-width: 90%;
   max-height: 80%;
@@ -347,7 +345,7 @@ section h2 {
   position: absolute;
   top: 20px;
   right: 35px;
-  color: #D6CCDF; /* 使用色卡的淺紫 */
+  color: #D6CCDF; 
   font-size: 40px;
   font-weight: bold;
   cursor: pointer;
@@ -369,7 +367,7 @@ section h2 {
   background-color: #fcfaff; /* 極淺紫色底 */
   padding: 2rem;
   border-radius: 15px;
-  border: 1px dashed #D6CCDF; /* 虛線邊框增加手作感 */
+  border: 1px dashed #D6CCDF; /* 虛線邊框 */
 }
 
 .rules-column {
@@ -393,7 +391,7 @@ section h2 {
   line-height: 1.6;
 }
 
-/* 圖示顏色使用金棕色點綴 */
+/* 圖示 */
 .rules-column i {
   color: #B08426;
   font-size: 1rem;
@@ -419,17 +417,16 @@ section h2 {
 .contact-buttons {
   display: flex;
   justify-content: center;
-  gap: 2rem; /* 增加間距讓重心更穩 */
+  gap: 2rem; 
   margin-top: 2rem;
   flex-wrap: wrap;
 }
 
 .btn {
-  /* 使用色卡深色，讓兩者視覺重量一致 */
   background-color: #403C50;
   color: #ffffff;
   padding: 1.2rem 2rem;
-  border-radius: 12px; /* 改為與卡片一致的圓角，較有整體感 */
+  border-radius: 12px; 
   text-decoration: none;
   font-weight: 600;
   transition: all 0.3s ease;
@@ -523,7 +520,7 @@ section h2 {
 }
 
 .timeline-content:hover {
-  transform: translateX(10px); /* 滑過時往右微動，很有互動感 */
+  transform: translateX(10px); /* 滑過時往右微動 */
   border-color: #9B8CA7;
 }
 
@@ -845,16 +842,6 @@ border-radius: 10px;
   font-size: 0.95rem;
   color: #555;
 }
-/* .price-note-list li i,
-.price-note-list li::before {
-   display: flex;
-   align-items: center;
-   gap: 8px;
-   margin-bottom: 8px;
-   line-height: 1.6;      /* ⭐與 price-note-list 一致 */
-   font-size: 0.95rem;
-   color: #B08426;
-} */
 
 .product02-note-list,
 .middle-note-list,
